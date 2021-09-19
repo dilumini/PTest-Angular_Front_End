@@ -15,4 +15,8 @@ export class CountryService {
   getCountryList(): Observable<Country[]> {
     return this.http.get<Country[]>(this.baseURL);
   }
+
+  addCountry(country: Country): Observable<Object>{
+    return this.http.post(`${this.baseURL}`, country);
+  }
 }
