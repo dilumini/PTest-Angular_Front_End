@@ -1,0 +1,28 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Update Country </h3>
+    
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> Country Code</label>
+            <input type="text" class ="form-control" id = "countryCode"
+                [(ngModel)] = "country.countryCode" name = "countryCode">
+        </div>
+        
+        <div class="form-group">
+            <label> Country Name</label>
+            <input type="text" class ="form-control" id = "countryName"
+                [(ngModel)] = "country.countryName" name = "countryName">
+        </div>
+    
+        <div class="form-group">
+            <label> Country Description</label>
+            <input type="text" class ="form-control" id = "countryDesc"
+                [(ngModel)] = "country.countryDesc" name = "countryDesc">
+        </div>
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+        
+    </form>
+    </div>
+    

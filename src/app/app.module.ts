@@ -8,12 +8,14 @@ import { CountryListComponent } from './country-list/country-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddCountryComponent } from './add-country/add-country.component';
 import { FormsModule} from '@angular/forms';
+import { UpdateCountryComponent } from './update-country/update-country.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CountryListComponent,
-    AddCountryComponent
+    AddCountryComponent,
+    UpdateCountryComponent
   ],
   imports: [
     BrowserModule,

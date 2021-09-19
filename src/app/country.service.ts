@@ -19,4 +19,17 @@ export class CountryService {
   addCountry(country: Country): Observable<Object>{
     return this.http.post(`${this.baseURL}`, country);
   }
+
+  getCountryById(countryId: any): Observable<Country>{
+    return this.http.get<Country>(`${this.baseURL}/${countryId}`);
+  }
+
+  updateCountry(countryId: any, country: Country): Observable<Object>{
+    return this.http.put(`${this.baseURL}/${countryId}`, country);
+  }
+
+  deleteCountry(countryId: any): Observable<Object>{
+    return this.http.delete(`${this.baseURL}/${countryId}`);
+  }
+
 }

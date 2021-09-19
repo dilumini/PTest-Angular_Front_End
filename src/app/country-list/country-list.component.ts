@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Country } from '../country';
 import { CountryService } from '../country.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-country-list',
@@ -11,7 +12,8 @@ export class CountryListComponent implements OnInit {
 
   countryL? : Country[];
 
-  constructor( private countryservice: CountryService) {  }
+  constructor( private countryservice: CountryService, 
+    private router: Router) {  }
 
   ngOnInit(): void {
     this.getCountry();
@@ -21,6 +23,17 @@ export class CountryListComponent implements OnInit {
   private getCountry(){
     this.countryservice.getCountryList().subscribe(data => {
       this.countryL=data;
+    })
+  }
+
+  updateCountry(countryId: any){
+    this.router.navigate(['update-country',countryId]);
+  }
+
+  deleteCountry(countryId: any){
+    this.countryservice.deleteCountry(countryId).subscribe( data => {
+      console.log(data);
+      this.getCountry();
     })
   }
 

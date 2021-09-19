@@ -5,6 +5,8 @@
             <th> Country Code</th>
             <th>Country Name</th>
             <th>Country Description</th>
+            <th>Update</th>
+            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
@@ -13,6 +15,11 @@
             <td> {{ country.countryName }} </td>
             <td> {{ country.countryDesc }} </td>
             <td>
+                <button (click)="updateCountry(country.countryId)" class="btn btn-info"> Update  </button>
+            </td>
+            <td>
+                <button (click)="deleteCountry(country.countryId)" class="btn btn-info"> Delete  </button>
+            </td>
                 
         </tr>
     </tbody>

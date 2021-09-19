@@ -1,6 +1,6 @@
 export class Country {
     
-    countryId?:number;
+    countryId:any;
     countryCode?:string;
     countryName?:string;
     countryDesc?:string;
