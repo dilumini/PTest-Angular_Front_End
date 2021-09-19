@@ -3,14 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CountryListComponent } from './country-list/country-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AddCountryComponent } from './add-country/add-country.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CountryListComponent,
+    AddCountryComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

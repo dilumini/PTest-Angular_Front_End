@@ -1,0 +1,20 @@
+<h2>Country List</h2>
+<table class="table table-stripped">
+    <thead>
+        <tr>
+            <th> Country Code</th>
+            <th>Country Name</th>
+            <th>Country Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let country of countryL" >
+            <td> {{ country.countryCode }} </td>
+            <td> {{ country.countryName }} </td>
+            <td> {{ country.countryDesc }} </td>
+            <td>
+                
+        </tr>
+    </tbody>
+
+</table>
