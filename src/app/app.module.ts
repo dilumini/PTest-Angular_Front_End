@@ -10,19 +10,22 @@ import { AddCountryComponent } from './add-country/add-country.component';
 import { FormsModule} from '@angular/forms';
 import { UpdateCountryComponent } from './update-country/update-country.component';
 
+import { AppMaterialModules } from './app.material-modules';
+
 @NgModule({
   declarations: [
     AppComponent,
     CountryListComponent,
     AddCountryComponent,
-    UpdateCountryComponent
+    UpdateCountryComponent,   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AppMaterialModules
   ],
   providers: [],
   bootstrap: [AppComponent]

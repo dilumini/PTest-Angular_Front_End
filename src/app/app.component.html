@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+<!-- <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
     <ul class = "navbar-nav">
         <li class = "nav-item">
             <a routerLink="country" routerLinkActive="active" class="nav-link" >Country List</a>
@@ -7,9 +7,22 @@
             <a routerLink="add-country" routerLinkActive="active" class="nav-link" >Add Country</a>
         </li>
     </ul>
-</nav>
+</nav> -->
+<mat-toolbar color = 'primary'>
+    <span>Country App</span>
+    <button mat-button color = "primary">
+        <a routerLink="country" routerLinkActive="active" class="nav-link" style="color: white;" >Country List</a>
+    </button>
+    
+    <button mat-button>
+        <a routerLink="add-country" routerLinkActive="active" class="nav-link" style="color: white;"  >Add Country</a>
+    </button>    
+</mat-toolbar>
 
-<h1 class="text-center"> {{title}} </h1>
+
+
+
+
 <div class="container">
 <router-outlet></router-outlet>
 </div>

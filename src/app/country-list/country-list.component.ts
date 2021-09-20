@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Country } from '../country';
 import { CountryService } from '../country.service';
 import { Router } from '@angular/router';
+import { MatTableDataSource } from '@angular/material/table';
+//import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-country-list',
@@ -11,6 +13,9 @@ import { Router } from '@angular/router';
 export class CountryListComponent implements OnInit {
 
   countryL? : Country[];
+
+  public displayedColumns = ['countryCode', 'countryName', 'countryDesc', 'update', 'delete'];
+  dataSource = new MatTableDataSource<Country>();
 
   constructor( private countryservice: CountryService, 
     private router: Router) {  }
@@ -23,6 +28,7 @@ export class CountryListComponent implements OnInit {
   private getCountry(){
     this.countryservice.getCountryList().subscribe(data => {
       this.countryL=data;
+      this.dataSource.data = this.countryL;
     })
   }
 
