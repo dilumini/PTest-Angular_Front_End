@@ -29,7 +29,7 @@ export class CountryService {
   }
 
   deleteCountry(countryId: any): Observable<Object>{
-    return this.http.delete(`${this.baseURL}/${countryId}`);
+    return this.http.delete(`${this.baseURL}/${countryId}`, { responseType: 'text' });
   }
 
 }
