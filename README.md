@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.6.
 
 # Install Angular Material
-ng add @angular/material
+ `ng add @angular/material`
 
 ## Development server
 
